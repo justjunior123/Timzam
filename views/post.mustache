@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ {{>head}}
+	<title>ITS ME!</title>
+</head>
+<body>
+	{{>nav}}
+	<div class="container main">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+          <div class="post-container">
+            <div class="row">
+              <div class="col-md-8">
+                <img src="{{node.display_url}}" alt="">
+              </div>
+              <div class="col-md-4">
+                <div style="padding: 24px 24px 24px 0" class="comments">
+                  <p>
+                    <img style="width: 40px; border-radius: 50%;
+                    margin-right: 12px" src="{{user.icon}}" alt="">
+                    <strong>{{user.username}}</strong>
+                    <br>
+                    {{user.comment}}
+                    <hr>
+                    <strong>{{node.edge_liked_by.count}}</strong><span> Likes</span>
+                    <span style="margin-left: 16px"></span>
+                    <strong>{{node.edge_media_to_comment.count}}</strong><span> Comments</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
